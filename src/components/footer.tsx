@@ -14,36 +14,42 @@ const Footer = () => {
 									contact me in these platforms.
 								</p>
 							</div>
-							<div className="flex flex-row gap-2">
-								<Link
-									target="https://www.facebook.com/affordapcworks"
-									href="https://www.facebook.com/affordapcworks"
-									className={`${buttonVariants({
-										variant: "outline",
-									})} flex items-center gap-2`}
-								>
-									<Facebook />
-									<span>Facebook</span>
-								</Link>
-								<Link
-									href="mailto:kevincorpin40@mail.com"
-									className={`${buttonVariants({
-										variant: "outline",
-									})} flex items-center gap-2`}
-								>
-									<Mail />
-									<span>Google Mail</span>
-								</Link>
-								<Link
-									target="https://www.linkedin.com/in/corpin-kevin-z-8a0961219/"
-									href="https://www.linkedin.com/in/corpin-kevin-z-8a0961219/"
-									className={`${buttonVariants({
-										variant: "outline",
-									})} flex items-center gap-2`}
-								>
-									<Linkedin />
-									<span>LinkedIn</span>
-								</Link>
+							<div className="flex flex-col items-center lg:flex-row gap-2">
+								<div>
+									<Link
+										target="https://www.linkedin.com/in/corpin-kevin-z-8a0961219/"
+										href="https://www.linkedin.com/in/corpin-kevin-z-8a0961219/"
+										className={`${buttonVariants({
+											variant: "outline",
+										})} flex items-center gap-2`}
+									>
+										<Linkedin />
+										<span>LinkedIn</span>
+									</Link>
+								</div>
+								<div>
+									<Link
+										target="https://www.facebook.com/affordapcworks"
+										href="https://www.facebook.com/affordapcworks"
+										className={`${buttonVariants({
+											variant: "outline",
+										})} flex items-center gap-2`}
+									>
+										<Facebook />
+										<span>Facebook</span>
+									</Link>
+								</div>
+								<div>
+									<Link
+										href="mailto:kevincorpin40@mail.com"
+										className={`${buttonVariants({
+											variant: "outline",
+										})} flex items-center gap-2`}
+									>
+										<Mail />
+										<span>Google Mail</span>
+									</Link>
+								</div>
 							</div>
 							<div className="mt-10">
 								<p>Kevin Corpin @2024</p>
