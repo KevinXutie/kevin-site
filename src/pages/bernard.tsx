@@ -31,8 +31,9 @@ const Bernard = () => {
 					Hey there! Just wanted to share the awesome project I recently wrapped
 					up for my client, Bernard Turiana! I put together a killer personal
 					computer for him, working within the budget he had on hand. It was a
-					blast bringing his vision to life, and I'm stoked with how it turned
-					out. If you're into tech stuff, you should definitely take a peek!
+					blast bringing his vision to life, and I&apos;m stoked with how it
+					turned out. If you&apos;re into tech stuff, you should definitely take
+					a peek!
 				</p>
 				<div>
 					<h3 className="text-xl mb-5 fontbo">
