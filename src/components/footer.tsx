@@ -3,18 +3,15 @@ import { Atom, Figma, Facebook, Mail, Linkedin } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 const Footer = () => {
     return (
-					<footer className="w-full flex max-h-5 py-28">
-						<div className="w-full max-w-5xl px-5 lg:px-0">
-							<div className="py-10">
+					<footer className="w-full flex max-h-5 py-28 flex-col">
+						<div className="w-full max-w-5xl lg:px-0">
+							<div className="flex items-center sm:block py-10 flex-col">
 								<h3 className="text-3xl font-bold"> Contact Me Here</h3>
 								<p>Are you interested in working with me?</p>
 								<p>Or do you want to ask me something?</p>
-								<p>
-									Or do you just wanted to become my friends? Fell free to
-									contact me in these platforms.
-								</p>
+								<p>Fell free to contact me in these platforms.</p>
 							</div>
-							<div className="flex flex-col items-center lg:flex-row gap-2">
+							<div className="flex flex-col sm:flex-row  items-center gap-2">
 								<div>
 									<Link
 										target="https://www.linkedin.com/in/corpin-kevin-z-8a0961219/"
@@ -51,9 +48,9 @@ const Footer = () => {
 									</Link>
 								</div>
 							</div>
-							<div className="mt-10">
-								<p>Kevin Corpin @2024</p>
-							</div>
+						</div>
+						<div className="mt-10">
+							<p>Kevin Corpin @2024</p>
 						</div>
 					</footer>
 				);

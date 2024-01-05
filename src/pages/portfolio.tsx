@@ -97,9 +97,14 @@ const Portfolio = () => {
 											</div>
 											<div className="w-full max-h-full flex flex-col justify-center gap-2">
 												<h3>
-													<p className="text-2xl font-semibold">Pc Assemble</p>
+													<p className="text-2xl font-semibold">
+														Fulfilling the Dream
+													</p>
 												</h3>
-												<p>Test</p>
+												<p>
+													Crafting the Ultimate Personal Computer for Client
+													Bernard Turiana within Budget Constraints.
+												</p>
 											</div>
 										</div>
 									</Link>

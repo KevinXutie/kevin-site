@@ -17,37 +17,41 @@ import { Card } from "@/components/ui/card";
 const HomePage = () => {
 	return (
 		<main className="w-full mx-auto">
-			<div className="w-full mx-auto flex justify-center items-center flex-col-reverse lg:flex-row gap-5">
-				<div className="flex flex-col items-center fade-in-text lg:text-center md:items-center">
-					<h3 className="text-5xl font-bold flex flex-row gap-2">
-						I&apos;m
-						<span className="bg-gradient-to-r from-yellow-500 to bg-pink-500 bg-clip-text text-transparent">
+			<div className="w-full mx-auto flex justify-center items-center flex-col-reverse lg:flex-row gap-5 fade-in-text">
+				<div className="flex flex-col items-center fade-in-text lg:text-center">
+					<h3 className="flex text-5xl font-bold flex-col items-center md:flex-row gap-2">
+						<div>I&apos;m</div>
+						<div className="bg-gradient-to-r from-yellow-500 to bg-pink-500 bg-clip-text text-transparent">
 							Kevin Corpin
-						</span>
+						</div>
 					</h3>
-					<p className="text-lg mt-4">
-						Front-end developer and UI/UX designer based in the philippines
-					</p>
-					<p className="text-lg ">
-						I&apos;m currently running a small business which is Afforda Pc
-						Workshop as a Computer Technian.
-					</p>
+					<div className="flex flex-col text-center">
+						<p className="text-lg mt-4">
+							Front-end developer and UI/UX designer based in the philippines,
+						</p>
+						<p className="text-lg ">
+							I&apos;m currently running a small business which is Afforda Pc
+							Workshop as a Computer Technian.
+						</p>
+					</div>
 				</div>
-				<div className=" fade-in-image">
+				<div>
 					<img
 						src="/kevin.png"
 						alt=""
-						className="object-cover rounded-3xl w-[350px] h-[400px]"
+						className="object-cover rounded-3xl w-[275px] h-[325px]"
 					/>
 				</div>
 			</div>
-			<div className=" w-full mx-auto py-5">
+			<div className=" w-full mx-auto py-5 fade-in-text">
 				<h3 className="text-2xl font-bold mb-5">Here&apos;s my Tech</h3>
 
 				<div className="flex flex-col gap-5">
 					<Link target="https://react.dev" href="https://react.dev">
 						<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<Atom className="w-[50px] h-[50px]" />
+							<div className="flex items-center">
+								<Atom className="w-[50px] h-[50px]" />
+							</div>
 							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
 								<p className="text-xl font-semibold w-full lg:w-fit">React</p>
 								<p>A JavaScripts Library for building user interfaces. </p>
