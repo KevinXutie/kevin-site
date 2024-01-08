@@ -1,18 +1,15 @@
-import Image from "next/image";
-import {
-	Atom,
-	Figma,
-	Facebook,
-	Mail,
-	Linkedin
-} from "lucide-react";
-import { BiLogoTailwindCss, BiLogoTypescript, BiLogoNodejs } from "react-icons/bi";
-import { SiNextdotjs } from "react-icons/si"
-import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { buttonVariants } from "@/components/ui/button";
+import { Atom, Figma } from "lucide-react";
+import {
+	BiLogoNodejs,
+	BiLogoTailwindCss,
+	BiLogoTypescript,
+} from "react-icons/bi";
+
 import { TabsContent } from "@radix-ui/react-tabs";
-import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { SiNextdotjs } from "react-icons/si";
 
 const HomePage = () => {
 	return (
@@ -48,100 +45,132 @@ const HomePage = () => {
 
 				<div className="flex flex-col gap-5">
 					<Link target="https://react.dev" href="https://react.dev">
-						<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<div className="flex items-center">
-								<Atom className="w-[50px] h-[50px]" />
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ ease: "easeInOut", transition: 1 }}
+						>
+							<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
+								<div className="flex items-center">
+									<Atom className="w-[50px] h-[50px]" />
+								</div>
+
+								<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
+									<p className="text-xl font-semibold w-full lg:w-fit">React</p>
+									<p>A JavaScripts Library for building user interfaces. </p>
+								</div>
 							</div>
-							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
-								<p className="text-xl font-semibold w-full lg:w-fit">React</p>
-								<p>A JavaScripts Library for building user interfaces. </p>
-							</div>
-						</div>
+						</motion.div>
 					</Link>
+
 					<Link
 						target="https://www.typescriptlang.org/"
 						href="https://www.typescriptlang.org/"
 					>
-						<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<div className="flex items-center">
-								<BiLogoTypescript className="w-[50px] h-[50px]" />
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ ease: "easeInOut", transition: 1 }}
+						>
+							<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
+								<div className="flex items-center">
+									<BiLogoTypescript className="w-[50px] h-[50px]" />
+								</div>
+								<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
+									<p className="text-xl font-semibold w-full lg:w-fit line-clamp-0">
+										TypeScripts
+									</p>
+									<p>
+										A strongly typed programming language that builds on
+										JavaScript, giving you better tooling at any scale.
+									</p>
+								</div>
 							</div>
-							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
-								<p className="text-xl font-semibold w-full lg:w-fit line-clamp-0">
-									TypeScripts
-								</p>
-								<p>
-									A strongly typed programming language that builds on
-									JavaScript, giving you better tooling at any scale.
-								</p>
-							</div>
-						</div>
+						</motion.div>
 					</Link>
 
 					<Link
 						target="https://tailwindcss.com/"
 						href="https://tailwindcss.com"
 					>
-						<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<div className="flex items-center">
-								<BiLogoTailwindCss className="w-[50px] h-[50px]" />
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ ease: "easeInOut", transition: 1 }}
+						>
+							<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
+								<div className="flex items-center">
+									<BiLogoTailwindCss className="w-[50px] h-[50px]" />
+								</div>
+								<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
+									<p className="text-xl font-semibold w-full lg:w-fit">
+										Tailwind CSS
+									</p>
+									<p>
+										A utility-first CSS framework for rapidly building custom
+										user interfaces.
+									</p>
+								</div>
 							</div>
-							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
-								<p className="text-xl font-semibold w-full lg:w-fit">
-									Tailwind CSS
-								</p>
-								<p>
-									A utility-first CSS framework for rapidly building custom user
-									interfaces.
-								</p>
-							</div>
-						</div>
+						</motion.div>
 					</Link>
 					<Link target="https://nextjs.org" href="https://nextjs.org">
-						<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<div className="flex items-center">
-								<SiNextdotjs className="w-[50px] h-[50px]" />
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ ease: "easeOut", transition: 1 }}
+						>
+							<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
+								<div className="flex items-center">
+									<SiNextdotjs className="w-[50px] h-[50px]" />
+								</div>
+								<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
+									<p className="text-xl font-semibold w-full lg:w-fit ">
+										Next Js
+									</p>
+									<p>
+										The ultimate React framework that enables developers to
+										build web application with ease.
+									</p>
+								</div>
 							</div>
-							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
-								<p className="text-xl font-semibold w-full lg:w-fit ">
-									Next Js
-								</p>
-								<p>
-									The ultimate React framework that enables developers to build
-									web application with ease.
-								</p>
-							</div>
-						</div>
+						</motion.div>
 					</Link>
 					<Link target="https://nodejs.org/en" href="https://nodejs.org/en">
-						<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<div className="flex items-center">
-								<BiLogoNodejs className="w-[50px] h-[50px]" />
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ ease: "easeOut", transition: 1 }}
+						>
+							<div className="w-full mx-auto flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
+								<div className="flex items-center">
+									<BiLogoNodejs className="w-[50px] h-[50px]" />
+								</div>
+								<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
+									<p className="text-xl font-semibold w-full lg:w-fit ">
+										Node Js
+									</p>
+									<p className="line-clamp-4">
+										Node.js is a cross-platform, open-source JavaScript runtime
+										environment.
+									</p>
+								</div>
 							</div>
-							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
-								<p className="text-xl font-semibold w-full lg:w-fit ">
-									Node Js
-								</p>
-								<p className="line-clamp-1">
-									Node.js is a cross-platform, open-source JavaScript runtime
-									environment.
-								</p>
-							</div>
-						</div>
+						</motion.div>
 					</Link>
 					<Link target="https://www.figma.com" href="https://www.figma.com">
-						<div className="w-full flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
-							<div className="flex items-center">
-								<Figma className="w-[50px] h-[50px]" />
+						<motion.div
+							whileHover={{ scale: 1.05 }}
+							transition={{ ease: "easeInOut", transition: 1 }}
+						>
+							<div className="w-full flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
+								<div className="flex items-center">
+									<Figma className="w-[50px] h-[50px]" />
+								</div>
+								<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
+									<p className="text-xl font-semibold w-full lg:w-fit">Figma</p>
+									<p>
+										A vector graphics editor and prototyping tool which is
+										primarily web-based.
+									</p>
+								</div>
 							</div>
-							<div className=" flex max-h-full items-center  flex-col gap-2 lg:flex-row ">
-								<p className="text-xl font-semibold w-full lg:w-fit">Figma</p>
-								<p>
-									A vector graphics editor and prototyping tool which is
-									primarily web-based.
-								</p>
-							</div>
-						</div>
+						</motion.div>
 					</Link>
 				</div>
 			</div>

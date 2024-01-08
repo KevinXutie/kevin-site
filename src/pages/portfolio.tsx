@@ -1,9 +1,7 @@
-import { Card, CardContent, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import * as React from "react";
-import { Button } from "@/components/ui/button";
+
+import { Card } from "@/components/ui/card";
+
 import Image from "next/image";
-import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 
 const Portfolio = () => {
@@ -109,6 +107,9 @@ const Portfolio = () => {
 										</div>
 									</Link>
 								</Card>
+								{/* <Link href={"/test"}>
+									<div className="text-4xl">TEST</div>
+								</Link> */}
 							</div>
 						</div>
 					</main>

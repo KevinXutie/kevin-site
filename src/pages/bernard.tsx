@@ -1,10 +1,36 @@
-import Link from "next/link";
-import { buttonVariants } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import {
+	Carousel,
+	CarouselContent,
+	CarouselItem,
+	CarouselNext,
+	CarouselPrevious,
+} from "@/components/ui/carousel";
+import { ArrowLeft, Pointer } from "lucide-react";
+
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import { buttonVariants } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Bernard = () => {
+	const images = [
+		{
+			url: "bernard1.png",
+			title: "Image 2",
+		},
+		{
+			url: "bernard2.png",
+			title: "Image 2",
+		},
+		{
+			url: "bernard3.png",
+			title: "Image 3",
+		},
+		{
+			url: "bernard4.png",
+			title: "Image 4",
+		},
+	];
 	return (
 		<main className="w-full mx-auto flex flex-col justify-center">
 			<div className="flex flex-col">
@@ -59,47 +85,36 @@ const Bernard = () => {
 						</div>
 					</div>
 				</div>
-				<div className="grid sm:grid-cols-2 grid-cols-1 gap-5 lg:col-span-2">
-					<div className="w-fit animate-in bg-secondary mx-auto rounded-xl p-2 hover:bg-accent">
-						<div className="relative w-[300px] h-[300px]">
-							<Image
-								src="/bernard1.png"
-								fill
-								className="object-contain"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div className="w-fit animate-in bg-secondary mx-auto rounded-xl p-2 hover:bg-accent">
-						<div className="relative w-[300px] h-[300px]">
-							<Image
-								src="/bernard2.png"
-								fill
-								className="object-contain"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div className="w-fit animate-in bg-secondary mx-auto rounded-xl p-2 hover:bg-accent">
-						<div className="relative w-[300px] h-[300px]">
-							<Image
-								src="/bernard3.png"
-								fill
-								className="object-contain"
-								alt=""
-							/>
-						</div>
-					</div>
-					<div className="w-fit animate-in bg-secondary mx-auto rounded-xl p-2 hover:bg-accent">
-						<div className="relative w-[300px] h-[300px]">
-							<Image
-								src="/bernard4.png"
-								fill
-								className="object-contain"
-								alt=""
-							/>
-						</div>
-					</div>
+				<div className="w-full max-w-5xl mx-auto px-2 lg:px-0">
+					<Carousel opts={{ align: "center", loop: true }}>
+						<CarouselContent>
+							{images.map((image, index) => (
+								<CarouselItem
+									key={`carouselitem_${index + 1}`}
+									className="basis-1/1 lg:basis-1/3 w-full"
+								>
+									<img
+										src={image.url}
+										alt={image.title}
+										className="mx-auto w-full h-96 object-contain object-center"
+									/>
+								</CarouselItem>
+							))}
+						</CarouselContent>
+						<CarouselPrevious className="hidden lg:inline-flex" />
+						<CarouselNext className="hidden lg:inline-flex" />
+					</Carousel>
+					<motion.div
+						animate={{
+							translateX: [20, -20],
+							opacity: [0, 0.3, 0],
+							transition: { duration: 2, repeat: Infinity },
+						}}
+						className="flex lg:hidden justify-center items-center gap-2
+						 mt-1 w-max mx-auto"
+					>
+						<Pointer className="text-5xl" />
+					</motion.div>
 				</div>
 			</div>
 		</main>
