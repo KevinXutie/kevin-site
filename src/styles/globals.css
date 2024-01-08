@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: #55b0e4;
+    transform-origin: 0%;
+}
 .fade-in-image {
     animation: fadeIn 3s;
 }

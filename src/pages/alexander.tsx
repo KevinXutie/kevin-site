@@ -5,14 +5,15 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion, useScroll } from "framer-motion";
 import { ArrowLeft, Pointer } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Alexander = () => {
+	const { scrollYProgress } = useScroll();
 	const images = [
 		{ url: "Alex.png", title: "Image 1" },
 		{ url: "alex1.png", title: "Image 2" },
@@ -21,6 +22,10 @@ const Alexander = () => {
 	];
 	return (
 		<main className="w-full mx-auto flex flex-col justify-center">
+			<motion.div
+				className="progress-bar z-50 mt-20"
+				style={{ scaleX: scrollYProgress }}
+			/>
 			<div className="flex flex-col">
 				<div className="w-full mx-auto flex flex-col items-center gap-10 mb-5 fade-in-text">
 					<div className="w-full mx-auto flex flex-row items-center gap-4">

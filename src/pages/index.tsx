@@ -156,6 +156,7 @@ const HomePage = () => {
 					<Link target="https://www.figma.com" href="https://www.figma.com">
 						<motion.div
 							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 1.05 }}
 							transition={{ ease: "easeInOut", transition: 1 }}
 						>
 							<div className="w-full flex flex-row gap-5 bg-secondary p-4 rounded-lg hover:bg-accent">
