@@ -1,12 +1,17 @@
-import Link from "next/link";
+import { motion, useScroll } from "framer-motion";
+
 import { buttonVariants } from "@/components/ui/button";
-import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const MyWebsite = () => {
+	const { scrollYProgress } = useScroll();
     return (
 					<main>
+						<motion.div
+							className="progress-bar z-50 mt-20"
+							style={{ scaleX: scrollYProgress }}
+						/>
 						<div className="w-full mx-auto flex flex-col gap-10 mb-5 fade-in-text lg:px-0">
 							<div className="w-full mx-auto flex flex-row items-center gap-4">
 								<div className="w-fit rounded-lg">
@@ -64,8 +69,8 @@ const MyWebsite = () => {
 										</h3>
 										<p>
 											In the Afforda PC workshop, I serve as a Computer
-											Technician, responsible for accepting clients desktops
-											and laptops for repairs. My duties include disassembling
+											Technician, responsible for accepting clients desktops and
+											laptops for repairs. My duties include disassembling
 											system units to diagnose issues and conducting selected
 											repairs. This involves breaking down systems, removing
 											malfunctioning hardware, and installing new parts as
